@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<head>
+    <title>
+        My Portfolio
+    </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+
+<body>
+   
+
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+        <img src="img/download.png" style="height: 50px; width: 50px;"> <button class="w3-bar-item w3-button w3-large"
+        onclick="w3_close()">Close &times; </button>
+        <button id="toggleMode">Mode</button>
+        <a href="#about" class="w3-bar-item w3-button">About</a>
+        <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+        <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+      </div>
+      
+<div id="main">
+  <input type="checkbox" id="check">
+   <section>  
+  <div class="navbar">
+    <div class="w3">
+      <button id="openNav" class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>
+    </div>
+   <div class="logo">JHE</div>
+     <ol class="menuitems">
+        <li><a href="#"> Home</a></li>
+        <li><a href="#about"> About</a></li>
+        <li><a href="#projects"> Projects</a></li>
+        <li><a href="#"> Contact</a></li>
+     </ol>
+     <label for="check" class="fa fa bars"></label>
+  </div>
+
+  <div clss="container">
+     <div class="text_container">
+        <h1> Hi there, I'm</h1>
+        <h2>Jherald Ballena</h2> <br>
+        <h5>Your Software Developer</h5>
+        <a href="/pdf/Ballena, Jherald -Resume.pdf" class="btn"> DOWNLOAD MY RESUME</a>
+     </div>
+  </div>
+
+<div class="image_container">
+  <div class="imgbox">
+    <img src="/img/prog.png" alt="user pic">
+  </div>
+  <span class="animblob"></span>
+</div> 
+
+<div class="icons">
+  <a class="fa fa-instagram" href="https://instagram.com/dlar_jhe?igshid=MzMyNGUyNmU2YQ==" target="_blank"><span>Insta</span></a><br>
+  <a class="fa fa-facebook" href="https://www.facebook.com/jherald814?mibextid=ZbWKwL" target="_blank"><span>Facebook</span></a><br>
+  <a class="fa fa-linkedin" href="https://www.linkedin.com/in/jherald-ballena-950848288/" target="_blank"><span>Linkedin</span></a>
+</div>
+     
+    </section>  
+      <!-- 
+      <div class="slideshow-container">
+     <div class="mySlides fade">
+      <div class="container">Hi I'm Jherald M. Ballena, your Software Developer</div>
+       
+          <img src="/img/sunset1.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides fade">
+        
+          <img src="/img/sunset2.jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+       
+          <img src="/img/sunset3.jpg" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+      -->
+        
+
+    <section id="about">
+      <h1 class="headings">ABOUT ME</h1>
+        <div id="pic">
+          <img src="/img/jhe1.jpg" alt="">
+        <div id="intro">
+          <h2>Jherald M. Ballena</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        </div>
+    </section>
+
+    <section id="projects">
+      <h1 class="headings">MY PROJECTS</h1>
+      <div class="gallery">
+        <img src="/img/sunset1.jpg" alt="">
+        <img src="/img/sunset2.jpg" alt="">
+        <img src="/img/sunset3.jpg" alt="">
+        <img src="/img/sunset1.jpg" alt="">
+      </div>
+
+    </section>
+
+    <section id="contact">
+      <h1 class="headings">CONTACT</h1>
+     <form action="" class="form">
+         <input type="text" name="name" class="input" placeholder=" Enter Your Name">
+         <input type="email" name="email" class="input" placeholder="Enter Your Email">
+         <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+         <input type="submit" value="SEND ID" id="send">
+     </form>
+    </section>
+
+    <footer>
+        2023 My Portfolio
+       </footer>
+    
+</div>
+   
+
+        
+<script src="/js/script.js"></script>
+<script>
+    function w3_open() {
+      document.getElementById("main").style.marginLeft = "25%";
+      document.getElementById("mySidebar").style.width = "25%";
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("openNav").style.display = 'none';
+    }
+    function w3_close() {
+      document.getElementById("main").style.marginLeft = "0%";
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("openNav").style.display = "inline-block";
+    }
+ </script>
+ 
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+    </script>
+</body>
+</html>
